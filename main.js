@@ -1,18 +1,14 @@
 let activeIndex = 0;
 let nextIndex = 1;
 
-const groups = document.getElementsByClassName('sectionPage')
-
-document.addEventListener('keypress', () => {
+document.addEventListener('wheel', () => {
     
-    nextIndex = activeIndex + 1 <= groups.length -1 ? activeIndex + 1 :0;
+    nextIndex = activeIndex + 1 <= 3 ? activeIndex + 1 :0;
 
     console.log(activeIndex, nextIndex);
 
     const currentGroup = document.querySelectorAll(`[data-index = "${activeIndex}"]`),
-    nextGroup = document.querySelectorAll(`[data-index = "${nextIndex}"]`)
-
-    console.log(currentGroup);
+    nextGroup = document.querySelectorAll(`[data-index = "${nextIndex}"]`);
 
     currentGroup.forEach(element => {
         element.dataset.status = "inactive";

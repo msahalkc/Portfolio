@@ -113,8 +113,8 @@ section{
     transform: rotate(-90deg);
 }
 
-.homeContent{
-    padding: 7rem 0 0 4rem;
+.content{
+    padding: 5rem 0 0 4rem;
 }
 
 .homeContent h1{
@@ -149,7 +149,7 @@ section{
 
 .homeImage{
     position: absolute;
-    transform: translate(85%, -85%);
+    transform: translate(85%, -90%);
 }
 
 .homeImage img{
@@ -232,10 +232,16 @@ section[data-status="inactive"]{
 
 .languagesBox{
     font-size: 2rem;
+    border: 1px solid var(--color-white);
+    width: fit-content;
 }
 
 .languagesBox *{
-    padding-right: 1rem;
+    padding: 1rem;
+}
+
+.languagesBox h4{
+    border-bottom: 0.05px solid;
 }
 
 .graphic{
