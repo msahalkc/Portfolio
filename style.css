@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-bg: #060403;
+    --color-white: #fff;
+    --color-border: rgba(255, 255, 255,0.1);
+    --gradient-first: #FB6037;
+    --gradient-second: #5AE1DB;
+    --gradient-second-faded: rgba(90, 225, 219,0.33);
+}
+
+a { color: inherit; text-decoration: none  ;}
+
+body{
+    background: var(--color-bg);
+    color: var(--color-white);
+    font-family: 'Urbanist', sans-serif;
+}
+
+.bgDivider{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1.3fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr;
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    width: 100dvw;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.bgDivider-item{
+    border-right: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.activeDivider{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1.3fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr;
+    height: 100vh;
+    height: 100dvh;
+    width: 100vw;
+    width: 100dvw;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: -3;
+}
+
+.bgDivider-item h4{
+    padding-top: 3.5rem;
+}
+
+.bgDivider-item h6{
+    padding-top: 4rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.bgDivider-item:nth-child(8){
+    border-right: 0;
+}
+
+.logoText{
+    font-family: 'Aclonica', sans-serif;
+    font-size: 2.25rem;
+}
+
+.sectionPage{
+    display: grid;
+    grid-template-columns: 1.3fr 5.6fr;
+    margin: 8rem 0 0 0;
+    height: 80vh;
+    height: 80dvh;
+    width: 100vw;
+    width: 100dvw;
+}
+
+section{
+    position: absolute;
+}
+
+.titleY{
+    display: flex;
+    flex-direction: column;
+}
+
+.creative{
+    padding-top: 12rem;
+}
+
+.designer{
+    padding-top: 7rem;
+}
+
+.titleY h1{
+    font-weight: bold;
+    font-size: 3rem;
+    transform: rotate(-90deg);
+}
+
+.homeContent{
+    padding: 7rem 0 0 4rem;
+}
+
+.homeContent h1{
+    font-size: 5rem;
+    line-height: 5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.actionSpace{
+    display: flex;
+    margin-top: 3rem;
+}
+
+.heroBtn{
+    background: linear-gradient(
+        to right,
+        var(--gradient-first),
+        var(--gradient-second)
+    );
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    border: 0;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.actionSpace p{
+    padding: 1rem;
+    margin-bottom: 0;
+}
+
+.homeImage{
+    position: absolute;
+    transform: translate(85%, -85%);
+}
+
+.homeImage img{
+    width: 40vw;
+}
+
+.uiux{
+    padding-top: 6rem;
+}
+
+.section[data-status="active"]{
+    transition: transform 400ms ease;
+}
+
+section[data-status="inactive"]{
+    transform: translateX(-100%) scale(0);
+    display: none;
+}
+
+.barMainGradient{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 10px;
+}
+
+.barMainGradient[data-status="active"]{
+    background: linear-gradient(
+        to right,
+        var(--gradient-first),
+        var(--gradient-second)
+    );
+}
+
+.barMainGradient[data-status="inactive"]{
+    background: transparent;
+}
+
+.pageFullGradient{
+    width: 100%;
+    height: 100vh;
+}
+
+.pageFullGradient[data-status="active"]{
+    background: linear-gradient(
+        to bottom,
+        var(--gradient-first),
+        var(--gradient-second-faded)
+    );
+    z-index: -2;
+    opacity: 33%;
+}
+
+.pageFullGradient[data-status="inactive"]{
+    background: transparent;
+}
+
+.aboutContent{
+    padding: 5rem 0 0 4rem;
+}
+
+.aboutContent h2{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.aboutImage{
+    position: absolute;
+    transform: translate(120%, -40%);
+}
+
+.aboutImage img{
+    width: 30vw;
+    border-radius: 30px;
+}
+
+.aboutContent p{
+    width: 30vw;
+}
+
+.languagesBox{
+    font-size: 2rem;
+}
+
+.languagesBox *{
+    padding-right: 1rem;
+}
+
+.graphic{
+    padding-top: 10rem;
+}
