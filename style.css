@@ -92,6 +92,7 @@ body{
 
 section{
     position: absolute;
+    transition: transform 3s ease;
 }
 
 .titleY{
@@ -161,7 +162,7 @@ section{
 }
 
 .section[data-status="active"]{
-    transition: transform 400ms ease;
+    transform: translateX(100%) scale(0);
 }
 
 section[data-status="inactive"]{
@@ -240,10 +241,35 @@ section[data-status="inactive"]{
     padding: 1rem;
 }
 
-.languagesBox h4{
-    border-bottom: 0.05px solid;
-}
-
 .graphic{
     padding-top: 10rem;
+}
+
+.portfolioContent h2{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.projectBox{
+    min-height: 250px;
+    min-width: 200px;
+    background: linear-gradient(
+        to right,
+        var(--gradient-first),
+        var(--gradient-second)
+    );
+    padding: 0.5rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.projectBox img{
+    display: block;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
 }
