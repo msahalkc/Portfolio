@@ -6,6 +6,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 :root{
@@ -237,7 +238,11 @@ section[data-status="inactive"]{
     width: fit-content;
 }
 
-.languagesBox *{
+.languagesBox h5{
+    padding: 1rem 0 0 1rem;
+}
+
+.languagesBox i{
     padding: 1rem;
 }
 
@@ -253,12 +258,14 @@ section[data-status="inactive"]{
 .projectBox{
     min-height: 250px;
     min-width: 200px;
-    background: linear-gradient(
+    /* background: linear-gradient(
         to right,
         var(--gradient-first),
         var(--gradient-second)
-    );
-    padding: 0.5rem;
+    ); */
+    border: 1px solid var(--color-white);
+    padding: 1rem;
+    text-align: center;
 }
 
 .container{
@@ -267,9 +274,91 @@ section[data-status="inactive"]{
     gap: 1rem;
 }
 
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-right: 5rem;
+}
+
 .projectBox img{
     display: block;
-    width: 350px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.projectBox h5{
+    padding-top: 1rem;
+}
+
+.border-btn{
+    padding: 1rem;
+    background: transparent;
+    color: var(--color-white);
+}
+
+.ContactContent{
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+}
+
+.contact-side{
+    padding-right: 2rem;
+}
+
+.contact-side h2{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.contact-side ul{
+    padding-left: 0;
+}
+
+.contact-side ul li{
+    display: flex;
+}
+
+.contact-socials{
+    display: flex;
+}
+
+.contact-socials i{
+    font-size: 2rem;
+    padding-right: 0.5rem;
+}
+
+.contact-form{
+    border: 1px solid var(--color-white);
+    padding: 2rem;
+    margin-right: 5rem;
+}
+
+.contact-form input,textarea{
+    background: transparent;
+    color: var(--color-white);
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-name{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-name input{
+    width: 80%;
+}
+
+#firstName{
+    margin-right: 2rem;
+}
+
+.contact-form textarea{
+    width: 100%;
+}
+
+#emailId{
+    width: 100%;
 }
